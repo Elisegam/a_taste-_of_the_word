@@ -8,14 +8,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{title}}</title>
 
-  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link rel="stylesheet" href="./stylesheets/main.css" />
 </head>
 
 <body>
 
-  {{{body}}}
-
-
+	{{> nav}}
+	{{> filter_bar}}   
+	{{{body}}}   
+	{{> footer}}
 
   <script src="https://apis.google.com/js/api.js"></script>
   <script type="module" src="/javascripts/test-api.js"></script>
