@@ -6,6 +6,10 @@ router.get("/", (req, res, next) => {
   res.render("index");
 });
 
+/* GET home page */
+router.get("/add-recipies", (req, res, next) => {
+  res.render("add-recipies");
+});
 module.exports = router;
 
 // const restVid=axios.create({

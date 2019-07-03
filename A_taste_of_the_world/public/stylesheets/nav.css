@@ -1,0 +1,39 @@
+header {
+  width: 500px;
+  height: 1200px;
+  padding: 20px;
+  background: #000;
+}
+
+.container {
+  width: 1000px;
+  max-width: 100%;
+  margin: auto;
+}
+.nav {
+  background: #cc0000;
+  padding-left: 20px;
+  padding-right: 15px;
+  padding-bottom: 40px;
+  color: #fff;
+}
+
+.nav-item a {
+  padding: 30px 15px;
+  display: block;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.flex-elem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-item {
+  display: flex;
+}

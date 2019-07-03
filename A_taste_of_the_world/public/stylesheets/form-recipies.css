@@ -1,0 +1,56 @@
+.container-form {
+  width: 600px;
+  margin: auto;
+  margin-top: 80px;
+  font-family: "calibri" !important;
+}
+.title-form {
+  font-size: 2em;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+.bg-form {
+  padding: 40px 80px;
+  background: #f8f8f8;
+}
+
+.input {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: transparent;
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+textarea {
+  resize: none;
+  outline: none;
+  padding: 10px 15px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  background: transparent;
+}
+
+.btn-add-img {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.submit-btn {
+  width: 150px;
+  margin: 20px auto;
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  border: none;
+  padding: 15px;
+  background: #cc0000;
+  color: #fff;
+}
