@@ -40,9 +40,33 @@
   display: block;
 }
 .bloc-ingredient-country-recipe {
+  position: relative;
   padding: 50px;
-  background: #f8f8f8;
-  min-height: 500px;
+  background-image: url("https://images.pexels.com/photos/733857/pexels-photo-733857.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  color: #222;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.1;
+}
+
+.ingredients {
+  position: absolute;
+  width: 350px;
+  opacity: 1 !important;
+  padding: 20px;
+  transform: rotate(-32deg) scale(0.9);
+  margin-left: 480px;
+  margin-top: 20px;
 }
 
 .container-ingredients {

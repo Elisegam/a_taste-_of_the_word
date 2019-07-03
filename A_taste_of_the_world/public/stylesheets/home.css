@@ -1,4 +1,6 @@
-.bg-header {
-  padding: 50px;
-  background: #000;
+.img-home {
+  width: 950px;
+  margin: auto;
+  margin-top: 50px;
+  display: block;
 }

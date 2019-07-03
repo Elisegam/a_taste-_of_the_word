@@ -1,5 +1,5 @@
 .add-form {
-  background: #fbfbfb;
+  background: #272a33;
 }
 .container-form {
   width: 700px;
@@ -13,7 +13,7 @@
   margin-top: 15px;
   margin-bottom: 25px;
   font-weight: bold;
-  color: #444;
+  color: #eee;
 }
 .bg-form {
   padding: 40px 80px;
@@ -23,7 +23,7 @@
 }
 .input {
   outline: none;
-  border: 1px solid #ddd;
+  border: 1px solid #f9f9f9;
   background: transparent;
   width: 100%;
   padding: 15px;
@@ -35,7 +35,7 @@ textarea {
   outline: none;
   padding: 10px 15px;
   width: 100%;
-  border: 1px solid #ddd;
+  border: 1px solid #f9f9f9;
   margin-bottom: 10px;
   background: transparent;
 }
@@ -57,8 +57,8 @@ textarea {
   font-size: 0.8em;
   border: none;
   padding: 15px;
-  background: #cc0000;
-  color: #fff;
+  background: #fff;
+  color: #272a33;
 }
 
 /*::-webkit-input-placeholder {
