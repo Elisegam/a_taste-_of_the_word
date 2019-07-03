@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router();
+const router = new express.Router();
 
 const recipeModel = require("../models/Recipe.js");
 
@@ -34,3 +34,5 @@ cookie
   .catch(err => {
     console.log("An error occured", err);
   });
+
+module.exports = router;

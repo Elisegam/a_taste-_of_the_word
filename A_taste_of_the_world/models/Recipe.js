@@ -4,7 +4,7 @@ const Schema = mongoose.Schema; // Assign the Schema
 const RecipeSchema = new Schema({
   Name: { type: String, required: true },
   Region: {
-    type: Array,
+    type: String,
     required: true,
     default: "Undefined"
   },
@@ -13,7 +13,7 @@ const RecipeSchema = new Schema({
     required: true
   },
   Ingrédients: {
-    type: String,
+    type: Array,
     required: false
   },
   image: {
