@@ -6,8 +6,9 @@ const express = require("express");
 const favicon = require("serve-favicon");
 const hbs = require("hbs");
 const mongoose = require("mongoose");
-const logger = require("morgan");
 const path = require("path");
+authRoutes = require("./routes/auth-route");
+mongoose.Promise = Promise;
 
 mongoose
   .connect("mongodb://localhost/a-taste-of-the-worldt", {
@@ -58,7 +59,14 @@ hbs.registerPartials(__dirname + "/views/partials");
 
 const index = require("./routes/index");
 const admin = require("./routes/admin");
+
+const basePageRouter = require("./routes/index");
+const adminRouter = require("./routes/admin");
+
 app.use(index);
 app.use(admin);
+app.use(authRoutes);
+app.use(basePageRouter);
+app.use(adminRouter);
 
 module.exports = app;

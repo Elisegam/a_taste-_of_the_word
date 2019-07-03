@@ -1,1 +1,35 @@
-<h1>MANAGE</h1>
+<div class="big-container manage-products-wrapper">
+  <h3 class="manage-products-title">Manage your added recipes</h3>
+  <table class="product-manage-table">
+    <thead>
+      <tr class="table-row">
+        <th colspan="1" class="table-head">Recipe Image</th>
+        <th colspan="1" class="table-head">Recipe Name</th>
+        <th colspan="1" class="table-head"> </a> Edit</th>
+        <th colspan="1" class="table-head">Delete</th>
+      </tr>
+
+    </thead>
+    <tbody>
+      {{#each recipe}}
+      <tr class="table-row">
+        <td class="table-division">
+          <div><img src="{{this.image}}" alt="img" class="table-image" /></div>
+        </td>
+        <td class="table-division">
+          <div>{{this.name}}</div>
+        </td>
+        <td class="table-division">
+          <div>${{this.price}}</div>
+        </td>
+        <td class="table-division">
+          <div>{{this.ref}}</div>
+        </td>
+        <td class="table-division"><a href="/recipe-edit/{{this._id}}" class="fa fa-edit table-icon"></a>
+        <td id="delete" class="table-division"><a href="/recipe-delete/{{this._id}}" class="fa fa-trash table-icon"
+            aria-hidden="true"></a></td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
