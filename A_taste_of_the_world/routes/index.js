@@ -16,6 +16,11 @@ router.get("/", (req, res, next) => {
 router.get("/add-recipies", (req, res, next) => {
   res.render("add-recipies");
 });
+
+/* GET home page */
+router.get("/see-more", (req, res, next) => {
+  res.render("see-more");
+});
 module.exports = router;
 
 var cookie = new recipeModel({

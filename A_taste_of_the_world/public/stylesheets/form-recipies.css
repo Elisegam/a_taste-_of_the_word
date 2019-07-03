@@ -1,5 +1,8 @@
+.add-form {
+  background: #fbfbfb;
+}
 .container-form {
-  width: 600px;
+  width: 700px;
   margin: auto;
   margin-top: 80px;
   font-family: "calibri" !important;
@@ -10,15 +13,17 @@
   margin-top: 15px;
   margin-bottom: 25px;
   font-weight: bold;
+  color: #444;
 }
 .bg-form {
   padding: 40px 80px;
-  background: #f8f8f8;
 }
-
+.white {
+  color: #fff;
+}
 .input {
   outline: none;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
   background: transparent;
   width: 100%;
   padding: 15px;
@@ -30,7 +35,7 @@ textarea {
   outline: none;
   padding: 10px 15px;
   width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
   margin-bottom: 10px;
   background: transparent;
 }
@@ -44,6 +49,7 @@ textarea {
   z-index: -1;
 }
 .submit-btn {
+  cursor: pointer;
   width: 150px;
   margin: 20px auto;
   display: block;
@@ -54,3 +60,8 @@ textarea {
   background: #cc0000;
   color: #fff;
 }
+
+/*::-webkit-input-placeholder {
+  color: #fff;
+}
+*/
