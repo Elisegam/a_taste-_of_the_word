@@ -24,6 +24,10 @@ header {
   display: block;
 }
 
+.nav-item a:hover {
+  transition: 0.3s ease;
+  color: #cc0000;
+}
 .logo {
   font-size: 2em;
   font-weight: bold;
