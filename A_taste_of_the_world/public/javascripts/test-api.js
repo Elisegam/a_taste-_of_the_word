@@ -36,7 +36,7 @@ function execute(keyword) {
     .list({
       part: "snippet",
       maxResults: 5,
-      q: "riz djon djon"
+      q: keyword
     })
     .then(
       function(response) {

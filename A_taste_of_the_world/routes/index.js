@@ -1,27 +1,32 @@
 const express = require("express");
 const router = express.Router();
 
+const recipeModel = require("../models/Recipe.js");
+
 /* GET home page */
 router.get("/", (req, res, next) => {
-  res.render("index");
+  if (req.query.search) {
+    Recipe;
+  } else {
+    res.render("index");
+  }
 });
 
 module.exports = router;
 
-// const restVid=axios.create({
-//   baseURL ="https://maps.googleapis.com/maps/api/js?key=YAIzaSyDl3boMxCQe34oJ9IklOMLofi6NmNgf_4UY&callback=initMap"
-// })
-// function getVidInfo(theName){
-//   restVid.get(theName)
-//   .then(restfromAPI => {
+var cookie = new recipeModel({
+  Name: "Cookie",
+  Region: "America",
+  Description: "Delicious cookies",
+  Ingrédients:
+    "1 cup salted butter softened 1 cup white (granulated) sugar 1 cup light brown sugar packed 2 tsp pure vanilla extract 2 large eggs 3 cups all-purpose flour 1 tsp baking soda ½ tsp baking powd"
+});
 
-//     console.log("API response",restfromAPI.data )
-//   })
-//   .catch(err=>{ console.log("Error is", err)
-// })
-// }
-
-// document.getElementById("theButton").onclick = function(){
-//   const vid = document.getElementById("theInput").value
-// getVidInfo(country);
-// }
+cookie
+  .save()
+  .then(user => {
+    console.log("cookie was created");
+  })
+  .catch(err => {
+    console.log("An error occured", err);
+  });

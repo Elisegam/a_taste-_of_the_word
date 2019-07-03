@@ -2,22 +2,19 @@ const mongoose = require("mongoose"); // Import mongoose
 const Schema = mongoose.Schema; // Assign the Schema
 
 const RecipeSchema = new Schema({
-  Name: { type: String, required: true, uppercase: Schema.toUpperCase(0) },
-  Country: {
+  Name: { type: String, required: true },
+  Region: {
     type: Array,
     required: true,
-    default: "Undefined",
-    enum: ["France", "Espagne", "Angleterre"]
+    default: "Undefined"
   },
   Description: {
     type: String,
-    required: true,
-    uppercase: Schema.toUpperCase(0)
+    required: true
   },
   Ingrédients: {
     type: String,
-    required: false,
-    uppercase: forEach(Schema.toUpperCase(0))
+    required: false
   },
   image: {
     type: String,
