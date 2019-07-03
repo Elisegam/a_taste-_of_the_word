@@ -1,0 +1,12 @@
+.search-bar {
+  outline: none;
+  border: none;
+  position: absolute;
+  width: 600px;
+  max-width: 100%;
+  padding: 15px;
+  top: 90px;
+  left: 50%;
+  border: 1px solid #f6f6f6;
+  transform: translateX(-50%);
+}
