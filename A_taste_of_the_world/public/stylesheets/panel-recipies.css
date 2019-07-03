@@ -4,7 +4,7 @@
   max-width: 100%;
   padding: 40px;
   margin-top: 18px;
-  background: #cc0000;
+  background: #272a33;
 }
 
 .bloc-recipies {
@@ -19,24 +19,30 @@
   margin-bottom: 0;
 }
 .img-recipies img {
-  width: 90px;
-  height: 90px;
+  width: 140px;
+  height: 110px;
   background: #333;
   display: inline-block;
   vertical-align: middle;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .name-recipies {
   margin-left: 30px;
   display: inline-block;
   vertical-align: middle;
+  font-weight: bold;
 }
 
 .see-more-link {
   position: absolute;
   bottom: 10px;
   right: 25px;
+  color: #272a33;
+}
+
+.see-more-link:hover {
+  transition: 0.3s ease;
   color: #cc0000;
 }
 
