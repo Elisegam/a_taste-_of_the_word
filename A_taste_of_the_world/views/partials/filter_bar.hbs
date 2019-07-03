@@ -1,9 +1,11 @@
 <form action="/" method="POST" class="">
   <div class="container-search-bar">
-    <input type="text" name="search" placeholder="Find your recipe" class="search-bar">
+    <input type="text" id="search-bar" name="search" placeholder="Find your recipe" class="search-bar"
+      onkeyup="showResults(this.value)" placeholdes="SE">
     <!--<input type="submit" value="Search" class="">-->
     <div class="panel-recipies hide">
       <div class="bloc-recipies">
+        <ul id="results"></ul>
         <span class="img-recipies">
           <img src="./images/riz-djon-djon.jpg" alt="">
         </span>

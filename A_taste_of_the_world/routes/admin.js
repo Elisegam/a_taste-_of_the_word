@@ -1,7 +1,5 @@
 const express = require("express");
-const router = express.Router();
-
-const Recipe = require("../models/Recipe.js");
+const router = new express.Router();
 
 // router.use((req, res, next) => {
 //   if (req.session.currentUser) {
@@ -10,6 +8,9 @@ const Recipe = require("../models/Recipe.js");
 //     res.redirect("/login");
 //   }
 // });
+
+//MODEL
+const Recipe = require("../models/Recipe");
 
 router.get("/recipe-add", (req, res) => {
   console.log(req.body);
@@ -25,8 +26,8 @@ router.post("/recipe-add", (req, res) => {
     image
   })
     .then(recipe => {
-      res.redirect("/");
-      res.render("recipe", { recipe });
+      res.redirect("/index");
+      // res.render("recipe", { recipe });
     })
     .catch(err => {
       res.redirect("/");
@@ -35,10 +36,22 @@ router.post("/recipe-add", (req, res) => {
 
 /* GET Manage recipies */
 router.get("/manage-recipies", (req, res, next) => {
-  res.render("manage-recipies");
+  Recipe.find().then(recipe => {
+    res.render("manage-recipies", { recipe });
+  });
 });
 
 //  EDIT recipes
+router.post("/recipe-edit/:id", (req, res) => {
+  Recipe.findById(req.params.id)
+    .then(recipe => {
+      res.render("recipe-edit", { recipe });
+    })
+    .catch(err => {
+      res.redirect("/manage-recipes");
+    });
+});
+
 router.post("/recipe-edit/:id", (req, res) => {
   Recipe.findByIdAndUpdate(req.params.id, req.body)
     .then(recipe => {
