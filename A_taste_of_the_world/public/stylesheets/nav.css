@@ -11,11 +11,12 @@ header {
   margin: auto;
 }
 .nav {
-  background: #cc0000;
+  background: #fff;
   padding-left: 20px;
   padding-right: 15px;
   padding-bottom: 40px;
-  color: #fff;
+  color: #000;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .nav-item a {
@@ -26,6 +27,7 @@ header {
 .logo {
   font-size: 2em;
   font-weight: bold;
+  font-family: "overlock";
 }
 
 .flex-elem {
