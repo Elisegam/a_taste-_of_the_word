@@ -2,7 +2,7 @@ const express = require("express");
 const router = new express.Router();
 const mongoose = require("mongoose");
 
-const recipeModel = require("../models/Recipe.js");
+const Recipe = require("../models/Recipe.js");
 
 /* GET home page */
 // router.get("/", (req, res, next) => {
@@ -41,18 +41,13 @@ router.get("/", (req, res, next) => {
   res.render("index");
 });
 
-/* GET add recipe page */
-router.get("/add-recipies", (req, res, next) => {
-  res.render("add-recipies");
-});
-
 /* GET home page */
 router.get("/see-more", (req, res, next) => {
   res.render("see-more");
 });
 module.exports = router;
 
-var cookie = new recipeModel({
+var cookie = new Recipe({
   Name: "Cookie",
   Region: "America",
   Description: "Delicious cookies",

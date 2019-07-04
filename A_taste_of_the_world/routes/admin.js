@@ -12,12 +12,22 @@ const router = new express.Router();
 //MODEL
 const Recipe = require("../models/Recipe");
 
-router.get("/recipe-add", (req, res) => {
-  console.log(req.body);
-  res.render("add_recipe");
+/* GET home page */
+router.get("/", (req, res, next) => {
+  res.render("index");
 });
 
-router.post("/recipe-add", (req, res) => {
+/* GET see-more */
+router.get("/see-more", (req, res, next) => {
+  res.render("see-more");
+});
+
+/* GET add recipe page */
+router.get("/add-recipies", (req, res, next) => {
+  res.render("add-recipies");
+});
+
+router.post("/add-recipes", (req, res) => {
   const { Name, Description, Ingrédients, image } = req.body;
   Recipe.create({
     Name,
