@@ -1,20 +1,44 @@
 const express = require("express");
 const router = new express.Router();
+const mongoose = require("mongoose");
 
-const recipeModel = require("../models/Recipe.js");
+const Recipe = require("../models/Recipe.js");
 
 /* GET home page */
+// router.get("/", (req, res, next) => {
+//   var q = req.query.q;
+//   Recipe.find(
+//     {
+//       $text: { $search: q }
+//     },
+//     {
+//       _id: 0,
+//       __v: 0
+//     },
+//     function(err, data) {
+//       res.json(data);
+//     }
+//   )
+//     .then(recipes => console.log(recipes))
+//     .catch(e => console.log(e));
+// });
+
+//   recipeModel.createIndex({
+//   Name: "text",
+//   Region: "text",
+//   image: "text"
+// });
+
+// const Recipe = mongoose.model("Recipe", recipeModel);
+
+// Recipe.find({
+//   $text: { $search: term }
+// })
+//   .then(recipes => console.log(recipes))
+//   .catch(e => console.log(e));
+
 router.get("/", (req, res, next) => {
-  if (req.query.search) {
-    Recipe;
-  } else {
-    res.render("index");
-  }
-});
-
-/* GET home page */
-router.get("/add-recipies", (req, res, next) => {
-  res.render("add-recipies");
+  res.render("index");
 });
 
 /* GET home page */
@@ -28,7 +52,7 @@ router.get("/favourite-foods", (req, res, next) => {
 });
 module.exports = router;
 
-var cookie = new recipeModel({
+var cookie = new Recipe({
   Name: "Cookie",
   Region: "America",
   Description: "Delicious cookies",

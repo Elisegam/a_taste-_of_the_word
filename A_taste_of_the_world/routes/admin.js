@@ -1,7 +1,5 @@
 const express = require("express");
-const router = express.Router();
-
-const Recipe = require("../models/Recipe.js");
+const router = new express.Router();
 
 // router.use((req, res, next) => {
 //   if (req.session.currentUser) {
@@ -11,12 +9,25 @@ const Recipe = require("../models/Recipe.js");
 //   }
 // });
 
-router.get("/recipe-add", (req, res) => {
-  console.log(req.body);
-  res.render("add_recipe");
+//MODEL
+const Recipe = require("../models/Recipe");
+
+/* GET home page */
+router.get("/", (req, res, next) => {
+  res.render("index");
 });
 
-router.post("/recipe-add", (req, res) => {
+/* GET see-more */
+router.get("/see-more", (req, res, next) => {
+  res.render("see-more");
+});
+
+/* GET add recipe page */
+router.get("/add-recipies", (req, res, next) => {
+  res.render("add-recipies");
+});
+
+router.post("/add-recipes", (req, res) => {
   const { Name, Description, Ingrédients, image } = req.body;
   Recipe.create({
     Name,
@@ -25,8 +36,8 @@ router.post("/recipe-add", (req, res) => {
     image
   })
     .then(recipe => {
-      res.redirect("/");
-      res.render("recipe", { recipe });
+      res.redirect("/index");
+      // res.render("recipe", { recipe });
     })
     .catch(err => {
       res.redirect("/");
@@ -35,10 +46,22 @@ router.post("/recipe-add", (req, res) => {
 
 /* GET Manage recipies */
 router.get("/manage-recipies", (req, res, next) => {
-  res.render("manage-recipies");
+  Recipe.find().then(recipe => {
+    res.render("manage-recipies", { recipe });
+  });
 });
 
 //  EDIT recipes
+router.post("/recipe-edit/:id", (req, res) => {
+  Recipe.findById(req.params.id)
+    .then(recipe => {
+      res.render("recipe-edit", { recipe });
+    })
+    .catch(err => {
+      res.redirect("/manage-recipes");
+    });
+});
+
 router.post("/recipe-edit/:id", (req, res) => {
   Recipe.findByIdAndUpdate(req.params.id, req.body)
     .then(recipe => {

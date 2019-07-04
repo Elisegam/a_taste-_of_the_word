@@ -7,6 +7,7 @@ const favicon = require("serve-favicon");
 const hbs = require("hbs");
 const mongoose = require("mongoose");
 const path = require("path");
+const logger = require("morgan");
 authRoutes = require("./routes/auth-route");
 mongoose.Promise = Promise;
 
@@ -32,7 +33,7 @@ const app = express();
 
 // Middleware Setup
 // gui était par ici : ) =>
-// app.use(logger("dev"));
+app.use(logger("dev"));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
