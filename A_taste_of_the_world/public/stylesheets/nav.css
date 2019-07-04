@@ -1,5 +1,5 @@
 .container {
-  width: 1000px;
+  width: 1200px;
   max-width: 100%;
   margin: auto;
 }
@@ -17,7 +17,8 @@
   display: block;
 }
 
-.nav-item a:hover {
+.nav-item a:hover,
+.nav-item i:hover {
   transition: 0.3s ease;
   color: #cc0000;
 }
@@ -36,3 +37,4 @@
 .flex-item {
   display: flex;
 }
+

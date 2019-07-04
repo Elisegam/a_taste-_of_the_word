@@ -21,6 +21,11 @@ router.get("/add-recipies", (req, res, next) => {
 router.get("/see-more", (req, res, next) => {
   res.render("see-more");
 });
+
+/* GET home page */
+router.get("/favourite-foods", (req, res, next) => {
+  res.render("favourite-foods");
+});
 module.exports = router;
 
 var cookie = new recipeModel({
